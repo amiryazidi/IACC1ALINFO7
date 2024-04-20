@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ResidenceComponent } from './residence/residence.component';
+import { ApartementComponent } from './apartement/apartement.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     FooterComponent,
     NotFoundComponent,
     DetailProductComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ResidenceComponent,
+    ApartementComponent
   ],
   imports: [
     BrowserModule,
