@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProductService } from '../services/product.service';
+import { Router } from '@angular/router';
+import { Product } from '../model/product';
 
 @Component({
   selector: 'app-add-product',
@@ -7,8 +10,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent {
-
-
+  product!:Product
+  constructor(private ps:ProductService,private rt:Router){}
   loginForm= new FormGroup({
     id: new FormControl('',Validators.required),
     title: new FormControl('',Validators.required),
@@ -19,5 +22,8 @@ export class AddProductComponent {
   })
 
   add(){
+
+    this.ps.addProduct(this.loginForm.value as any)
+    this.rt.navigateByUrl('/product')
   }
 }
