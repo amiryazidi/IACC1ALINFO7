@@ -7,6 +7,7 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ResidenceComponent } from './residence/residence.component';
 import { ApartementComponent } from './apartement/apartement.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   //route par defaut
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'product', component:ProductComponent},
   {path:'residence', component:ResidenceComponent},
   {path:'login', component:ReactiveFormComponent},
+  {path:'AddP', component:AddProductComponent},
   {path:'detailP/:id', component:DetailProductComponent},
   {path:'apartement/:id', component:ApartementComponent},
   //route not found

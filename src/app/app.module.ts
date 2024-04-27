@@ -13,6 +13,7 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ResidenceComponent } from './residence/residence.component';
 import { ApartementComponent } from './apartement/apartement.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ApartementComponent } from './apartement/apartement.component';
     DetailProductComponent,
     ReactiveFormComponent,
     ResidenceComponent,
-    ApartementComponent
+    ApartementComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
