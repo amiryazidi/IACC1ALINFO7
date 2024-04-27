@@ -23,6 +23,8 @@
             <td> <button class="btn btn-dark" (click)="increment(i)">Like</button></td>
             <td> <button class="btn btn-dark" (click)="buy(i)" [disabled]="p.quantity==0">buy</button></td>
             <td> <button class="btn btn-info" [routerLink]="['/detailP',p.id]">Detail</button></td>
+            <td> <button class="btn btn-info" (click)="supp(p.id)">delete</button></td>
+            <td> <button class="btn btn-info" [routerLink]="['/UpdateP',p.id]">Update</button></td>
         </ng-container>
 
     </tr>

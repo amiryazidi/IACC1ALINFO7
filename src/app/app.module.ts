@@ -14,7 +14,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ResidenceComponent } from './residence/residence.component';
 import { ApartementComponent } from './apartement/apartement.component';
 import { AddProductComponent } from './add-product/add-product.component';
-
+import { HttpClientModule} from  '@angular/common/http';
+import { UpdateProComponent } from './update-pro/update-pro.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,13 +28,15 @@ import { AddProductComponent } from './add-product/add-product.component';
     ReactiveFormComponent,
     ResidenceComponent,
     ApartementComponent,
-    AddProductComponent
+    AddProductComponent,
+    UpdateProComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

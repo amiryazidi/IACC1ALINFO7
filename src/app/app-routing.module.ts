@@ -8,6 +8,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ResidenceComponent } from './residence/residence.component';
 import { ApartementComponent } from './apartement/apartement.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { UpdateProComponent } from './update-pro/update-pro.component';
 
 const routes: Routes = [
   //route par defaut
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'login', component:ReactiveFormComponent},
   {path:'AddP', component:AddProductComponent},
   {path:'detailP/:id', component:DetailProductComponent},
+  {path:'UpdateP/:id', component:UpdateProComponent},
   {path:'apartement/:id', component:ApartementComponent},
   //route not found
   {path:'**',component:NotFoundComponent},

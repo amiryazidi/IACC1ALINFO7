@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from '../services/product.service';
 import { Router } from '@angular/router';
 import { Product } from '../model/product';
+import { ConsumerProductService } from '../services/consumer-product.service';
 
 @Component({
   selector: 'app-add-product',
@@ -11,7 +12,7 @@ import { Product } from '../model/product';
 })
 export class AddProductComponent {
   product!:Product
-  constructor(private ps:ProductService,private rt:Router){}
+  constructor(private ps:ProductService,private rt:Router,private consp:ConsumerProductService){}
   loginForm= new FormGroup({
     id: new FormControl('',Validators.required),
     title: new FormControl('',Validators.required),
@@ -23,7 +24,14 @@ export class AddProductComponent {
 
   add(){
 
-    this.ps.addProduct(this.loginForm.value as any)
-    this.rt.navigateByUrl('/product')
+   // this.ps.addProduct(this.loginForm.value as any)
+      this.consp.AddProduct(this.loginForm.value as any).subscribe(
+        {
+          next:()=>this.rt.navigateByUrl('/product'),
+          error: (err)=>console.log(err)
+        }
+
+      )
+
   }
 }
